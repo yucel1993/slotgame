@@ -55,7 +55,7 @@ export async function createSession(userId: string, email: string) {
 }
 
 export async function getSession() {
-  const token = cookies().get("auth-token")?.value
+  const token =await cookies().get("auth-token")?.value
 
   if (!token) {
     return null
